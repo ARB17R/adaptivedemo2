@@ -90,7 +90,7 @@ aside p {
 .uatext {
     font-family: 'Montserrat', sans-serif;
     font-size: normal;
-    text-align: center; }
+    }
 
 /* Photo zone */
 #myphoto {
@@ -103,74 +103,84 @@ aside p {
     box-shadow: 0px 4px 14px plum;
 }
 
-.phphoto:hover {
-    transform: scale(3.5);
-    justify-items: center;
-}
 .phphoto {
     display: inline-block;
-    box-shadow:4px 4px 14px plum ;
-    margin-left: 7.5%;  
+    box-shadow:1px 1px 1px plum ;
+    margin: 2%;  
     width: 100px;
     justify-items: center;  
 }
+.phphoto:hover {
+    transform: scale(2.5);
+    justify-items: center;
+}
+/* text zone */
+
+ol {
+    display: inline;
+}
 
 
-@media screen and (max-width:1200px){
+@media screen and (orientation: portrait) {
+   
+    .wraper {
+        width: 320px;
+    }
+    .post-itm {width: 48%;}
+    ol {
+        display: inline-block;
+        padding-top: 0px;
+    }   
+    main{   
+        flex-direction: column;
+    }
+    section{
+        width: 90%;
+    }
+    aside{
+        display: flex;
+        max-width: 98%;
+        width: 100%;
+        margin: 0% auto;
+        position: static;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        margin: 0px auto;
+        flex-direction: column;
+    }
+
+    .phphoto:hover {
+        transform: scale(5.5);
+    }
+    .phphoto {
+        display: inline-block;
+        box-shadow:0px 1px 2px plum ;
+        margin-left: 7.5%;  
+        width: 25px;
+        justify-items: center;  
+    }
+    .info {
+        
+        display: flex;
+        max-width: 98%;
+        width: 100%;
+        margin: 0% auto;
+        position: static;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        margin: 0px auto;
+        flex-direction: column;
+
+        }
+
+}
+
+@media screen and (max-width:1200px) {
     .post-itm {
         width: 40%;
         justify-content:right;
     }
 }
-@media screen and (max-width:860px) {.post-itm {width: 30%;}}
-@media screen and (max-height:430px) {
-    .post-itm {width: 30%;}
-    aside {position: static;}
-    .info {margin-left: 5%;}
-}
-@media screen and (max-width:600px) {
-    .post-itm {width: 48%;}
-ol {padding: 0px;}   
-main{
-    flex-direction: column;
-}
-section{
-    width: 90%;
-}
-aside{
-    display: flex;
-    max-width: 98%;
-    width: 100%;
-    margin: 0% auto;
-    position: static;
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    margin: 0px auto;
-    flex-direction: column;
-}
 
-.phphoto:hover {
-    transform: scale(5.5);
-}
-.phphoto {
-    display: inline-block;
-    box-shadow:0px 1px 2px plum ;
-    margin-left: 7.5%;  
-    width: 25px;
-    justify-items: center;  
-}
-.info {
-    
-    display: flex;
-    max-width: 98%;
-    width: 100%;
-    margin: 0% auto;
-    position: static;
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    margin: 0px auto;
-    flex-direction: column;
 
-}
-    
-}
+
